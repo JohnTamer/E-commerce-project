@@ -1,5 +1,6 @@
 import "./home.css";
 import Product from "../product/product";
+
 const Home = () => {
   return (
     <div className="home">
@@ -9,6 +10,7 @@ const Home = () => {
           src={require("../../assets/images/home4.jpg")}
           alt="home page"
         />
+
         <div className="home__row">
           <Product
             title="The lean startup"
@@ -40,7 +42,7 @@ const Home = () => {
           <Product
             title="HK GAMING GK61 Mechanical Gaming Keyboard - 61 Keys Multi Color RGB Illuminated LED Backlit Wired Programmable for PC/Mac Gamer (Gateron Optical Brown, White)"
             price={60}
-            img="https://www.amazon.com/GK61-Swappable-Mechanical-Gaming-Keyboard/dp/B07QYHM32Q/ref=sr_1_1_sspa?keywords=keyboard+gaming&qid=1655015402&s=computers-intl-ship&sprefix=key%2Ccomputers-intl-ship%2C187&sr=1-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFISUg0VjFTNjRDNzMmZW5jcnlwdGVkSWQ9QTAxMTg4MjIzVzFXNUFKU05XNUdGJmVuY3J5cHRlZEFkSWQ9QTA0MTAzMDQ3MEpRTkZNVUowRVQmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl"
+            img="https://m.media-amazon.com/images/I/51wEdwyixBL._AC_UY327_FMwebp_QL65_.jpg"
             rating={5}
           />
         </div>
