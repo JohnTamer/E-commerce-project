@@ -1,5 +1,20 @@
 import "./product.css";
-const Product = ({ title, rating, price, img }) => {
+import { useStateValue } from "./../../services/stateProvider";
+const Product = ({ id, title, rating, price, img }) => {
+  const [{ basket }, dispatch] = useStateValue();
+  console.log(basket);
+  const addToBasket = () => {
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: id,
+        title: title,
+        rating: rating,
+        price: price,
+        img: img,
+      },
+    });
+  };
   return (
     <div className="product">
       <div className="product__info">
@@ -17,7 +32,9 @@ const Product = ({ title, rating, price, img }) => {
         </div>
       </div>
       <img src={img} alt="" />
-      <button className="product__button">Add to cart</button>
+      <button className="product__button" onClick={addToBasket}>
+        Add to Basket
+      </button>
     </div>
   );
 };
