@@ -1,7 +1,10 @@
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import "./login.css";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { auth } from "../../firebase";
 const Login = () => {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleEmail = (e) => {
@@ -13,9 +16,27 @@ const Login = () => {
   };
   const signIn = (e) => {
     e.preventDefault();
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        console.log(auth);
+        if (auth) {
+          navigate("/");
+        }
+      })
+      .catch((err) => alert(err.message));
   };
   const register = (e) => {
     e.preventDefault();
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        console.log(auth);
+        if (auth) {
+          navigate("/");
+        }
+      })
+      .catch((err) => alert(err.message));
   };
   return (
     <div className="login">

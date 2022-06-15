@@ -1,30 +1,38 @@
 import "./header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useStateValue } from "./../../services/stateProvider";
+import { auth } from "../../firebase";
 const Header = () => {
-  const [state, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
+  const handleAuth = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
   return (
     <div className="header">
-      <NavLink to="/">
+      <Link to="/">
         <img
           className="header__logo"
           src={require("../../assets/images/amazon1.png")}
           alt="logo"
         />
-      </NavLink>
+      </Link>
       <div className="header__search">
         <input type="text" className="header__input" />
         <SearchIcon className="header__searchIcon" />
       </div>
       <div className="header__nav">
-        <NavLink to="/login">
-          <div className="header__option">
+        <Link to={!user && "/login"}>
+          <div className="header__option" onClick={handleAuth}>
             <span className="header__lineone">Hello guest</span>
-            <span className="header__linetwo">Sign in</span>
+            <span className="header__linetwo">
+              {user ? "Sign out" : "Sign in"}
+            </span>
           </div>
-        </NavLink>
+        </Link>
 
         <div className="header__option">
           <span className="header__lineone">Returns</span>
@@ -34,14 +42,14 @@ const Header = () => {
           <span className="header__lineone">Your</span>
           <span className="header__linetwo">Prime</span>
         </div>
-        <NavLink to="/checkout">
+        <Link to="/checkout">
           <div className="header__basket">
             <ShoppingBasketIcon />
             <span className="header__linetwo basketCount">
-              {state.basket?.length}
+              {basket?.length}
             </span>
           </div>
-        </NavLink>
+        </Link>
       </div>
     </div>
   );
