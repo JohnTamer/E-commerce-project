@@ -13,12 +13,14 @@ const Home = () => {
 
         <div className="home__row">
           <Product
+            id="1"
             title="The lean startup"
-            price="19.99"
+            price={19.99}
             img="https://m.media-amazon.com/images/I/51aEhyjQGrL._AC_SY1000_.jpg"
             rating={5}
           />
           <Product
+            id="2"
             title="Razer DeathAdder Essential Gaming Mouse: 6400 DPI Optical Sensor - 5 Programmable Buttons - Mechanical Switches - Rubber Side Grips - Classic Black"
             price={29.99}
             img="https://m.media-amazon.com/images/I/8189uwDnMkL._AC_UY327_FMwebp_QL65_.jpg"
@@ -27,6 +29,7 @@ const Home = () => {
         </div>
         <div className="home__row">
           <Product
+            id="3"
             title="Glorious Model D- (Minus) Lightweight Gaming Mouse, Matte White (GLO-MS-DM-MW)
               Glorious Model D- (Minus) Lightweight Gaming Mouse, Matte White (GLO-MS-DM-MW)"
             price={75}
@@ -34,12 +37,14 @@ const Home = () => {
             rating={5}
           />
           <Product
+            id="4"
             title="Logitech G502 Lightspeed Wireless Gaming Mouse with Hero 25K Sensor, PowerPlay Compatible, Tunable Weights and Lightsync RGB - Black"
             price={150}
             img="https://m.media-amazon.com/images/I/718b9wK3eaL._AC_UY327_FMwebp_QL65_.jpg"
             rating={5}
           />
           <Product
+            id="5"
             title="HK GAMING GK61 Mechanical Gaming Keyboard - 61 Keys Multi Color RGB Illuminated LED Backlit Wired Programmable for PC/Mac Gamer (Gateron Optical Brown, White)"
             price={60}
             img="https://m.media-amazon.com/images/I/51wEdwyixBL._AC_UY327_FMwebp_QL65_.jpg"
