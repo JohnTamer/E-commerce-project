@@ -4,6 +4,7 @@ import Header from "./components/header/header";
 import Home from "./components/home/home";
 import Checkout from "./components/checkout/checkout";
 import Login from "./components/login/login";
+import Payment from "./components/payment/payment";
 import { auth } from "./firebase";
 import { useEffect } from "react";
 import { useStateValue } from "./services/stateProvider";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/" element={[<Header />, <Home />]} />
           <Route path="/checkout" element={[<Header />, <Checkout />]} />
           <Route path="/login" element={<Login />} />
+          <Route path="/payment" element={[<Header />, <Payment />]} />
         </Routes>
       </div>
     </Router>
