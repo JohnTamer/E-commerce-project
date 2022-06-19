@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "../../services/reducer";
-import axios from "axios";
+import axios from "../../services/axios";
 const Payment = () => {
   const [{ user, basket }, dispath] = useStateValue();
   const [error, setError] = useState(null);
