@@ -1,0 +1,59 @@
+[debug] [2022-06-21T14:02:40.102Z] ----------------------------------------------------------------------
+[debug] [2022-06-21T14:02:40.104Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\johnt\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-06-21T14:02:40.105Z] CLI Version:   11.1.0
+[debug] [2022-06-21T14:02:40.105Z] Platform:      win32
+[debug] [2022-06-21T14:02:40.105Z] Node Version:  v16.15.0
+[debug] [2022-06-21T14:02:40.106Z] Time:          Tue Jun 21 2022 16:02:40 GMT+0200 (Eastern European Standard Time)
+[debug] [2022-06-21T14:02:40.107Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-21T14:02:40.188Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-21T14:02:40.189Z] > authorizing via signed-in user (johntamer98@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2022-06-21T14:02:40.299Z] [hub] writing locator at C:\Users\johnt\AppData\Local\Temp\hub-johnzone-ee4b3.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[info] +  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-06-21T14:02:40.363Z] defaultcredentials: writing to file C:\Users\johnt\AppData\Roaming\firebase\johntamer98_gmail_com_application_default_credentials.json
+[debug] [2022-06-21T14:02:40.368Z] Setting GAC to C:\Users\johnt\AppData\Roaming\firebase\johntamer98_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\johnt\\AppData\\Roaming\\firebase\\johntamer98_gmail_com_application_default_credentials.json"}}
+[debug] [2022-06-21T14:02:40.374Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/johnzone-ee4b3/adminSdkConfig [none]
+[debug] [2022-06-21T14:02:40.742Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/johnzone-ee4b3/adminSdkConfig 200
+[debug] [2022-06-21T14:02:40.742Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/johnzone-ee4b3/adminSdkConfig {"projectId":"johnzone-ee4b3","storageBucket":"johnzone-ee4b3.appspot.com"}
+[debug] [2022-06-21T14:02:40.761Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-06-21T14:02:40.762Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-06-21T14:02:40.762Z] Starting Emulator UI with command {"binary":"node","args":["--dns-result-order=ipv4first","C:\\Users\\johnt\\.cache\\firebase\\emulators\\ui-v1.7.0\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"--dns-result-order=ipv4first\",\"C:\\\\Users\\\\johnt\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.7.0\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-06-21T14:02:40.966Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "C:\My Projects\johnzone\johnzone\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\My Projects\\johnzone\\johnzone\\functions\" for Cloud Functions..."}}
+[debug] [2022-06-21T14:02:41.039Z] Validating nodejs source
+[debug] [2022-06-21T14:02:44.898Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "stripe": "^9.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-06-21T14:02:44.898Z] Building nodejs source
+[debug] [2022-06-21T14:02:44.899Z] Analyzing nodejs backend spec
+[debug] [2022-06-21T14:02:44.900Z] Could not find functions.yaml. Must use http discovery
