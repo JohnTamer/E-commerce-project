@@ -46,6 +46,7 @@ const Payment = () => {
         navigate("/orders", { replace: true });
       });
   };
+  console.log("the secret is", clientSecret);
   const handleChange = (event) => {
     setDisabled(event.emty);
     setError(event.error ? event.error.message : "");
